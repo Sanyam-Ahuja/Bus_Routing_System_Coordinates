@@ -39,31 +39,43 @@ id,name,x,y
 6,Sneha,8,6
 7,Arjun,3,8
 8,Riya,1,7
-buses.csv
-csv
-Copy code
+```
+
+### `buses.csv`
+```csv
 id,capacity
 1,4
 2,4
-🔹 Installation
-Clone the repo:
+```
 
-bash
-Copy code
-git clone https://github.com/YOUR-USERNAME/bus-route-optimizer.git
-cd bus-route-optimizer/coordinates_version
-Install dependencies:
+---
 
-bash
-Copy code
-pip install -r requirements.txt
-🔹 Run the Optimizer
-bash
-Copy code
+## 🔹 Installation
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/YOUR-USERNAME/bus-route-optimizer.git
+   cd bus-route-optimizer/coordinates_version
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## 🔹 Run the Optimizer
+
+```bash
 python main.py
-🔹 Example Output
-less
-Copy code
+```
+
+---
+
+## 🔹 Example Output
+
+```
 Bus 1 (Capacity 4)
 Assigned Students: ['Amit', 'Simran', 'Rohit', 'Kabir']
 Route: [(0, 0), (2.0, 3.0), (5.0, 4.0), (6.0, 2.0), (9.0, 3.0), (0, 0)]
@@ -75,7 +87,24 @@ Route: [(0, 0), (4.0, 9.0), (8.0, 6.0), (3.0, 8.0), (1.0, 7.0), (0, 0)]
 Distance: 20.23 km
 
 Total Distance (all buses): 39.10 km
+```
+
+---
+
+## 🔹 Notes
+
+- This version uses **coordinates only** (no APIs).  
+- The school is hardcoded at `(0,0)` but can be changed in `main.py`.  
+- Optimization minimizes **total distance**, not necessarily each bus individually.  
+- OR-Tools ensures capacity constraints are respected.  
+
+---
+
+## 🔹 Future Improvements
+
+- Replace Euclidean distance with **real road distances** using Google Maps API or OpenRouteService (ORS).  
+- Add traffic/time constraints.  
+- Build a visualization (matplotlib routes on a map).  
 
 
-
-(Readme Made Using Chatgpt)
+(Readme.md Make Using Chat GPT)
